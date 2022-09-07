@@ -63,7 +63,7 @@
     </div>
 </main>
 
-<div class="popmenu verborgen" id="popup" onclick="toggleLijnen()">
+<div class="popmenu verborgen" id="popup">
     <ul>
         <li><a href="#overons">Over ons</a></li>
         <li><a href="#diensten">Diensten</a></li>

@@ -5,11 +5,12 @@ export default function scriptJS() {
     let lijnM = document.getElementById("lijnM");
     let lijnB = document.getElementById("lijnB");
     let hamburger = document.getElementById("hamburger");
-    hamburger.addEventListener("click", () => {
-        toggleLijnen();
-    });
+    hamburger.addEventListener("click", () => { toggleLijnen(); })
 
-    const toggleLijnen = () => {
+    popup.addEventListener("click", () => { toggleLijnen(); })
+
+
+    function toggleLijnen() {
         popup.classList.toggle("verborgen");
         popup.classList.toggle("transitie");
         lijnT.classList.toggle("rotateKlok");
@@ -22,12 +23,12 @@ export default function scriptJS() {
         popup.classList.add("verborgen");
     };
 
+
+
     //javascript voor caroussel
     let fotos = document.querySelector(".fotos");
     let fotoKaarten = document.getElementsByClassName("fotoKaart");
     let knoppenLijst = document.querySelector(".knoppenLijst");
-    let caroussel = document.querySelector(".caroussel");
-    let shift;
 
     for (let i = 0; i < fotoKaarten.length; i++) {
         let knop = document.createElement("button");
