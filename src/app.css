@@ -171,7 +171,7 @@ main .partner h3 {
 }
 main .partner :after {
   content: "";
-  background-image: url(/static/images/Path1.svg);
+  background-image: url(/images/Path1.svg);
   position: absolute;
   right: -46vw;
   top: -40vh;
