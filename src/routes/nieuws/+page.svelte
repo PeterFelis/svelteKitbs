@@ -1,5 +1,7 @@
 <script>
     import Bericht from "$lib/Bericht.svelte";
+    import { goto } from '$app/navigation';
+  
 
     export let data;
 </script>
@@ -17,12 +19,12 @@
             {/if}
             {/await}
             </div>
-            <a href='/#nieuws'>
+            <div on:click={()=>goto("/#nieuws")}>
             <h5 class="ctatext">
             <img class='omdraaien' src="images/Icon awesome-long-arrow-alt-right-1.svg" alt="" />
             terug
             </h5>
-            </a>
+        </div>
     </div>
 </aside>
 
