@@ -197,7 +197,8 @@
 
           :after {
               content: "";
-              background-image: url(images/Path1.svg);
+              bssackground-image: url(images/Path1.svg);
+              background-image: url(/static/images/Path1.svg);
               position: absolute;
               right: -46vw;
               top: -40vh;
@@ -1035,7 +1036,8 @@
 
       .nieuwsVoordelen:after {
           content: " ";
-          background-image: url(images/BackgroundElement.svg);
+          backgrodsund-image: url(images/BackgroundElement.svg);
+          background-image: url(/images/BackgroundElement.svg);
           position: absolute;
           width: 1369px;
           top: -360px;
