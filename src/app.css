@@ -1,0 +1,899 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-margin-top: 100px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 26px;
+  color: #242424;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 15px;
+}
+
+.ctatext {
+  color: #ff8000;
+  font-weight: 600;
+  margin-top: 2em;
+  font-size: 16px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.login button {
+  width: 151px;
+  height: 45px;
+  border: none;
+  font-size: 16px;
+  background-color: #00bf26;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.popmenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgb(255, 154, 1);
+  z-index: 5;
+}
+.popmenu ul {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.popmenu ul a {
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.verborgen {
+  transform: translateX(-100vw);
+}
+
+.transitie {
+  transition: 1s;
+}
+
+nav .wide {
+  display: none;
+}
+nav .logo {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  flex: 1;
+}
+nav .small {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 8vh;
+  padding: 0 20px 0 20px;
+  background: rgb(255, 154, 1);
+}
+nav .hamburger {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+nav .hamburger .lijn {
+  height: 0.4rem;
+  width: 3rem;
+  background-color: #ffffff;
+  border-radius: 0.6rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  transition: 1s;
+}
+nav .hamburger .rotateKlok {
+  transform: rotate(45deg);
+}
+nav .hamburger .rotateAntiKlok {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+main {
+  padding: 0 20px 50px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+main .partner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  margin-top: 100px;
+}
+main .partner h1 {
+  width: 80%;
+}
+main .partner h3 {
+  width: 80%;
+  font-weight: 400;
+  margin: 0.8em 0 0.8em 0;
+}
+main .partner :after {
+  content: "";
+  background-image: url(images/Path1.svg);
+  position: absolute;
+  right: -46vw;
+  top: -40vh;
+  height: 951px;
+  width: 1241px;
+  z-index: -20;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(1px);
+}
+main .foto {
+  width: 100%;
+}
+main .foto .lee {
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1019607843);
+  border: 5px solid #ffffff;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+main .knopOverons {
+  width: 178px;
+  background-color: #ffffff;
+  color: #ff8000;
+  margin-bottom: 2rem;
+  height: 45px;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  font-size: 16px;
+}
+
+.opsomming {
+  padding: 0px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.opsomming h2 {
+  width: 80%;
+  line-height: 1.2em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+.opsomming h4 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-weight: 500;
+}
+.opsomming h5 {
+  margin-top: 1.5em;
+}
+.opsomming p {
+  width: 90%;
+  color: #8f8f8f;
+  line-height: 1.8em;
+}
+.opsomming .zwart {
+  color: #242424;
+}
+.opsomming .flex2 {
+  flex: 2;
+}
+.opsomming .card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.opsomming .lijnOranje {
+  width: 80px;
+  height: 3px;
+  background-color: #ff8000;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.opsomming .iconGradient {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, rgb(255, 128, 0) 0%, rgb(255, 162, 0) 100%);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2588235294);
+  margin-top: 3em;
+  margin-bottom: 1.2;
+}
+
+.nieuwsVoordelen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 4em;
+}
+.nieuwsVoordelen .nieuwsveld {
+  flex: 1;
+  background-color: #f5f5f5;
+  padding: 2em 20px 3em 20px;
+  opacity: 0.9;
+}
+.nieuwsVoordelen .nieuwsveld h2 {
+  padding: 10px 0;
+}
+.nieuwsVoordelen .nieuwsveld h5 {
+  margin: 1em 0px 0px 0px;
+}
+.nieuwsVoordelen .voordelen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 20px 100px 20px;
+}
+.nieuwsVoordelen .voordelen h2 {
+  margin-bottom: 1em;
+  font-size: 24px;
+  font-weight: 600;
+}
+.nieuwsVoordelen .voordelen li {
+  margin-bottom: 0.5em;
+  font-size: 16px;
+}
+.nieuwsVoordelen .voordelen .tick {
+  display: inline-block;
+  height: 16px;
+  width: 25px;
+  border-bottom: 5px solid #21910c;
+  border-left: 5px solid #21910c;
+  transform: rotate(-45deg);
+  margin-right: 15px;
+}
+.nieuwsVoordelen .gradientTerugbellen {
+  flex: 1;
+  color: #ffffff;
+  background: radial-gradient(circle, rgb(255, 128, 0) 0%, rgb(255, 162, 0) 100%);
+  padding: 2em 2em 4em 2em;
+}
+.nieuwsVoordelen .gradientTerugbellen h2 {
+  color: #ffffff;
+  padding-bottom: 20px;
+}
+.nieuwsVoordelen .gradientTerugbellen p {
+  padding-bottom: 10px;
+}
+.nieuwsVoordelen .gradientTerugbellen .belOnsTerug {
+  position: relative;
+}
+.nieuwsVoordelen .gradientTerugbellen .telNummerKnop {
+  height: 50px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 25px;
+}
+.nieuwsVoordelen .gradientTerugbellen .telNummerKnop::placeholder {
+  color: #8f8f8f;
+  font-size: 18px;
+  opacity: 0.5;
+}
+.nieuwsVoordelen .gradientTerugbellen button {
+  border-radius: 10px;
+  background-color: #00bf26;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  height: 50px;
+  width: 205px;
+  margin-top: 1em;
+}
+
+.kennis {
+  padding: 60px 20px 100px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.kennis .usp {
+  width: 100%;
+}
+.kennis h2 {
+  width: 80%;
+}
+.kennis p {
+  width: 90%;
+  margin: 30px 0px;
+  line-height: 24px;
+}
+.kennis .caroussel {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: flex-start;
+  width: 100%;
+}
+.kennis .caroussel .fotos {
+  display: flex;
+  transition: transform 1s;
+}
+.kennis .caroussel .fotos .fotoKaart {
+  padding: 2em;
+  padding-left: 0;
+  min-width: 170px;
+}
+.kennis .caroussel .fotos .fotoKaart img {
+  max-height: 178px;
+  width: auto;
+  border-radius: 10px;
+}
+.kennis .caroussel .knoppenLijst {
+  display: flex;
+  justify-content: flex-end;
+  min-height: 1em;
+}
+.kennis .caroussel .knop {
+  background-color: #8f8f8f;
+  height: 0.6em;
+  width: 3em;
+  border: none;
+  margin-left: 1em;
+  border-radius: 10px;
+}
+.kennis .caroussel .active {
+  background: #ff8000;
+}
+
+.overMetHand {
+  background: transparent linear-gradient(162deg, #ff8000 0%, #ffa200 100%) 0% 0% no-repeat padding-box;
+  color: #ffffff;
+  padding: 50px 20px 50px 20px;
+}
+.overMetHand h2 {
+  margin-bottom: 20px;
+  line-height: 1.4em;
+  color: #ffffff;
+}
+.overMetHand p {
+  margin-top: 1em;
+  padding-bottom: 1em;
+  line-height: 1.7em;
+  opacity: 0.8;
+}
+.overMetHand img {
+  display: none;
+}
+
+.kernwaarden {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.kernwaarden h2 {
+  margin-bottom: 20px;
+}
+.kernwaarden p {
+  margin-top: 1em;
+  padding-bottom: 1em;
+  line-height: 1.7em;
+}
+.kernwaarden .tekst {
+  padding: 60px 20px 0 20px;
+}
+.kernwaarden .tekst button {
+  border-radius: 10px;
+  background-color: #00bf26;
+  color: #ffffff;
+  height: 50px;
+  border: 1px solid #ffffff;
+  width: 100%;
+  margin: 1em 0 0 0;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.kernwaarden .gezicht {
+  padding-top: 80px;
+  min-width: 40%;
+  margin-right: 50px;
+}
+.kernwaarden .gezicht img {
+  max-width: 100%;
+  height: auto;
+  background-color: #0a1c2b;
+}
+
+footer {
+  background-color: #f5f5f5;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  display: flex;
+  flex-direction: column;
+}
+footer .contactInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .contactInfo p {
+  font-size: 16px;
+  margin: 0;
+}
+footer .contactInfo .logo {
+  flex: 1;
+}
+footer .contactInfo .naw {
+  margin-top: 2em;
+  flex: 1;
+  text-align: center;
+}
+footer .contactInfo .tel {
+  margin-top: 2em;
+  flex: 1;
+  text-align: center;
+}
+footer .contactInfo .opening {
+  margin-top: 2em;
+  flex: 1;
+  text-align: center;
+}
+footer .copyright {
+  display: flex;
+  margin-top: 5em;
+  flex-direction: column;
+  align-items: center;
+}
+footer .copyright .payoff {
+  font-size: 14px;
+  flex: 2;
+  text-align: center;
+  max-width: 79%;
+}
+footer .copyright .klopper {
+  margin-top: 3em;
+  flex: 1;
+  display: flex;
+  align-content: center;
+  font-size: 14px;
+  justify-content: flex-end;
+}
+
+@media only screen and (min-width: 700px) {
+  .verborgen {
+    transform: translateX(-200vw);
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  main .partner {
+    text-align: left;
+    align-items: center;
+    padding: 20px;
+  }
+  main .partner h1 {
+    max-width: 60%;
+  }
+  main .partner button {
+    margin: 3em auto 3em auto;
+    width: 40%;
+  }
+  main .partner :after {
+    right: -20vw;
+    top: -25vh;
+  }
+  .opsomming {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 60px;
+  }
+  .opsomming .card {
+    min-width: 50%;
+  }
+  .opsomming .flex2 {
+    min-width: 100%;
+  }
+  .nieuwsVoordelen {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 50px;
+    width: 100%;
+  }
+  .nieuwsVoordelen .nieuwsveld {
+    min-width: 50%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+    border: 8px solid #ffffff;
+    padding: 1em 0 1em 50px;
+  }
+  .nieuwsVoordelen .nieuwsveld h5 {
+    width: 90%;
+  }
+  .nieuwsVoordelen .voordelen {
+    min-width: 50%;
+    min-height: 55%;
+    margin: 0;
+    padding: 1em 2em 2em 20px;
+  }
+  .nieuwsVoordelen .gradientTerugbellen {
+    border-radius: 20px;
+    padding: 1em;
+    margin: 1em;
+    max-width: 80%;
+  }
+  .nieuwsVoordelen .gradientTerugbellen h2 {
+    font-size: 24px;
+  }
+  .nieuwsVoordelen .gradientTerugbellen button {
+    position: absolute;
+    top: -1em;
+    right: 0;
+    width: 35%;
+  }
+  .kennis .usp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 400px;
+    padding-left: 50px;
+  }
+  .overMetHand {
+    padding-left: 50px;
+    background: transparent linear-gradient(126deg, #ff8000 0%, #ffa200 100%) 0% 0% no-repeat padding-box;
+    position: relative;
+    margin: 0 auto;
+    color: #ffffff;
+  }
+  .overMetHand h2 {
+    width: 60%;
+    margin-bottom: 20px;
+    line-height: 1.2em;
+  }
+  .overMetHand p {
+    width: 75%;
+    margin-top: 10px;
+    padding-bottom: 20px;
+  }
+  .overMetHand img {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0.8;
+  }
+  .kernwaarden .gezicht {
+    display: flex;
+    padding-top: 80px;
+    padding-right: 100px;
+  }
+  .kernwaarden .gezicht img {
+    width: 100%;
+    height: auto;
+    background-color: #0a1c2b;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  h3 {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 38px;
+  }
+  nav .small {
+    display: none;
+  }
+  nav .wide {
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+  }
+  nav .wide ul {
+    flex: 10;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 14%;
+    margin-right: 17%;
+  }
+  nav .wide ul a {
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  main .partner {
+    flex-direction: row;
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+  main .partner .container {
+    flex: 1;
+    flex-direction: column;
+    text-align: left;
+  }
+  main .partner h1 {
+    min-width: 100%;
+    margin: 0;
+  }
+  main .partner h3 {
+    max-width: 100%;
+    margin: 0;
+  }
+  main .partner .h3 {
+    font-size: 18px;
+  }
+  main .partner .foto {
+    flex: 1;
+    width: 100%;
+    height: auto;
+  }
+  main .partner .foto .lee {
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1019607843);
+    transform: translateX(140px) scale(1.4, 1.4);
+    border: 4px solid #ffffff;
+  }
+  main .partner :after {
+    right: 20%;
+    top: -25vh;
+  }
+  .opsomming .card {
+    min-width: 25%;
+  }
+  .opsomming .flex2 {
+    min-width: 50%;
+    margin: 10em auto 2em auto;
+  }
+  .nieuwsVoordelen {
+    flex-direction: row;
+  }
+  .nieuwsVoordelen .nieuwsveld {
+    max-width: 50%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .nieuwsVoordelen .voordelen {
+    max-width: 100%;
+    padding: 0 0 0 40px;
+  }
+  .nieuwsVoordelen .gradientTerugbellen {
+    max-width: 100%;
+    height: aut0;
+    margin-right: 50px;
+    border-radius: 10px;
+    padding-top: 30px;
+  }
+  .kennis {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .kennis .usp {
+    width: 50%;
+    padding: 40px;
+  }
+  .kennis .caroussel {
+    width: 50%;
+  }
+  .kennis .caroussel .fotos .fotoKaart {
+    min-width: 205px;
+  }
+  .kennis .caroussel .fotos .fotoKaart img {
+    min-height: 233px;
+  }
+  .overMetHand {
+    border-radius: 41px;
+    padding-left: 70px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .overMetHand p {
+    width: 60%;
+  }
+  .kernwaarden {
+    flex-direction: row;
+    overflow: hidden;
+    margin-top: 50px;
+  }
+  .kernwaarden .tekst {
+    min-width: 50%;
+    padding: 60px;
+  }
+  .kernwaarden .tekst h2 {
+    font-size: 24px;
+  }
+  .kernwaarden .tekst button {
+    width: 70%;
+    margin-top: 2em;
+  }
+  .kernwaarden .gezicht {
+    display: flex;
+    padding: 0;
+    align-items: center;
+    width: 50%;
+  }
+  .kernwaarden .gezicht img {
+    background-color: transparent;
+    width: auto;
+    height: 60%;
+  }
+  .footer {
+    padding: 0 60px 0 60px;
+  }
+  .footer .contactInfo {
+    flex-direction: row;
+  }
+  .footer .contactInfo p {
+    font-size: 16px;
+    margin: 0;
+  }
+  .footer .contactInfo .logo {
+    flex: 1;
+  }
+  .footer .contactInfo .naw {
+    flex: 1;
+    text-align: left;
+  }
+  .footer .contactInfo .tel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+  .footer .contactInfo .opening {
+    flex: 1;
+    text-align: left;
+  }
+  .footer .copyright {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  .footer .copyright .payoff {
+    font-size: 14px;
+    flex: 2;
+  }
+  .footer .copyright .klopper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 1241px) {
+  body {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 54px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  .pagina {
+    width: 1241px;
+    margin: 0 auto;
+  }
+  main {
+    overflow: visible;
+  }
+  main .partner {
+    padding-top: 100px;
+  }
+  main .partner :after {
+    right: 13vw;
+    top: -15vh;
+  }
+  .nieuwsVoordelen {
+    position: relative;
+    padding-top: 100px;
+  }
+  .nieuwsVoordelen:after {
+    content: " ";
+    background-image: url(images/BackgroundElement.svg);
+    position: absolute;
+    width: 1369px;
+    top: -360px;
+    right: 87%;
+    height: 1369px;
+    z-index: -10;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    visibility: visible;
+  }
+  .kernwaarden .tekst {
+    min-width: 45%;
+  }
+  .kernwaarden .gezicht {
+    min-width: 55%;
+  }
+  .kernwaarden img {
+    height: 100%;
+    width: auto;
+    transform: scale(1.2) translateX(50px);
+  }
+  .footer {
+    min-width: 100vw;
+    margin: 0;
+  }
+  .footer .copyright .payoff {
+    font-size: 14px;
+    flex: 1;
+  }
+  .footer .copyright .klopper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+    margin-top: 0;
+  }
+}

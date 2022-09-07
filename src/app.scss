@@ -1,0 +1,1086 @@
+  //kleuren
+  $ctaGroen: #00bf26;
+  $wit: #ffffff;
+  $grijs: #f5f5f5;
+
+  $kop: #242424;
+  $platDonker: #444444;
+  $platLicht: #8f8f8f;
+  $oranje: #ff8000;
+
+  // reset
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      scroll-margin-top: 100px;
+  }
+
+  html {
+      scroll-behavior: smooth
+  }
+
+  body {
+      font-family: "Poppins", sans-serif;
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+  }
+
+  ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+  }
+
+  h1 {
+      font-size: 26px;
+  }
+
+  h2 {
+      font-size: 26px;
+      color: $kop;
+  }
+
+  h3 {
+      font-size: 14px;
+  }
+
+  h4 {
+      font-size: 18px; // ja! bij de rondjes
+  }
+
+  h5 {
+      font-size: 15px; // was 16 voor bekijk al onze diensten naar 16
+  }
+
+  .ctatext {
+      color: $oranje;
+      font-weight: 600;
+      margin-top: 2em;
+      font-size: 16px;
+  }
+
+  .bold {
+      font-weight: 700;
+  }
+
+  .login {
+      button {
+          width: 151px;
+          height: 45px;
+          border: none;
+          font-size: 16px;
+          background-color: $ctaGroen;
+          color: $wit;
+          border-radius: 8px;
+      }
+  }
+
+  .popmenu {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      height: 100vh;
+      width: 100%;
+      background: rgb(255, 154, 1);
+      z-index: 5;
+
+      ul {
+          height: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+
+          a {
+              font-size: 26px;
+              font-weight: bold;
+              color: $wit;
+              text-decoration: none;
+          }
+      }
+  }
+
+  .verborgen {
+      transform: translateX(-100vw);
+  }
+
+  .transitie {
+      transition: 1s;
+  }
+
+  nav {
+      .wide {
+          display: none;
+      }
+
+      .logo {
+          width: 100%;
+          max-width: 150px;
+          height: auto;
+          flex: 1;
+      }
+
+      .small {
+          display: flex;
+          position: fixed;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          top: 0;
+          left: 0;
+          height: 8vh;
+          padding: 0 20px 0 20px;
+          background: rgb(255, 154, 1);
+      }
+
+      .hamburger {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+
+          .lijn {
+              height: 0.4rem;
+              width: 3rem;
+              background-color: $wit;
+              border-radius: 0.6rem;
+              margin-top: 0.25rem;
+              margin-bottom: 0.25rem;
+              transition: 1s;
+          }
+
+          .rotateKlok {
+              transform: rotate(45deg);
+          }
+
+          .rotateAntiKlok {
+              transform: translateY(-10px) rotate(-45deg);
+          }
+      }
+  }
+
+  main {
+      padding: 0 20px 50px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: $wit;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+
+      .partner {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          flex: 1;
+          margin-top: 100px;
+
+          h1 {
+              width: 80%;
+          }
+
+          h3 {
+              width: 80%;
+              font-weight: 400;
+              margin: 0.8em 0 0.8em 0;
+          }
+
+          :after {
+              content: "";
+              background-image: url(images/Path1.svg);
+              position: absolute;
+              right: -46vw;
+              top: -40vh;
+              height: 951px;
+              width: 1241px;
+              z-index: -20;
+              background-position: right center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              filter: blur(1px);
+          }
+      }
+
+      .foto {
+          width: 100%;
+
+          .lee {
+              width: 100%;
+              height: auto;
+              box-shadow: 0px 0px 40px #0000001a;
+              border: 5px solid $wit;
+              border-radius: 20px;
+              background-color: $wit;
+          }
+      }
+
+      .knopOverons {
+          width: 178px;
+          background-color: $wit;
+          color: $oranje;
+          margin-bottom: 2rem;
+          height: 45px;
+          border-radius: 10px;
+          border: 1px solid $wit;
+          font-size: 16px;
+      }
+  }
+
+  .opsomming {
+      padding: 0px 20px 0 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+          width: 80%;
+          line-height: 1.2em;
+          font-weight: 700;
+          margin-bottom: 1em;
+      }
+
+      h4 {
+          margin-top: 1em;
+          margin-bottom: 1em;
+          font-weight: 500;
+      }
+
+      h5 {
+          margin-top: 1.5em;
+      }
+
+      p {
+          width: 90%;
+          color: $platLicht;
+          line-height: 1.8em;
+      }
+
+      .zwart {
+          color: $kop;
+      }
+
+      .flex2 {
+          flex: 2;
+      }
+
+      .card {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+      }
+
+      .lijnOranje {
+          width: 80px;
+          height: 3px;
+          background-color: $oranje;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+      }
+
+      .iconGradient {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: radial-gradient(circle,
+                  rgba(255, 128, 0, 1) 0%,
+                  rgba(255, 162, 0, 1) 100%);
+          box-shadow: 0px 0px 15px 0px #00000042;
+          margin-top: 3em;
+          margin-bottom: 1.2;
+      }
+  }
+
+  .nieuwsVoordelen {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 4em;
+
+      .nieuwsveld {
+          flex: 1;
+          background-color: $grijs;
+          padding: 2em 20px 3em 20px;
+          opacity: 0.9;
+
+          h2 {
+              padding: 10px 0;
+          }
+
+          h5 {
+              margin: 1em 0px 0px 0px;
+          }
+      }
+
+      .voordelen {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 50px 20px 100px 20px;
+
+          h2 {
+              margin-bottom: 1em;
+              font-size: 24px;
+              font-weight: 600;
+          }
+
+          li {
+              margin-bottom: 0.5em;
+              font-size: 16px;
+          }
+
+          .tick {
+              display: inline-block;
+              height: 16px;
+              width: 25px;
+              border-bottom: 5px solid #21910c;
+              border-left: 5px solid #21910c;
+              transform: rotate(-45deg);
+              margin-right: 15px;
+          }
+      }
+
+      .gradientTerugbellen {
+          flex: 1;
+          color: $wit;
+          background: radial-gradient(circle,
+                  rgba(255, 128, 0, 1) 0%,
+                  rgba(255, 162, 0, 1) 100%);
+          padding: 2em 2em 4em 2em;
+
+          h2 {
+              color: $wit;
+              padding-bottom: 20px;
+          }
+
+          p {
+              padding-bottom: 10px;
+          }
+
+          .belOnsTerug {
+              position: relative;
+          }
+
+          .telNummerKnop {
+              height: 50px;
+              width: 100%;
+              border: none;
+              border-radius: 10px;
+              padding: 25px;
+          }
+
+          .telNummerKnop::placeholder {
+              color: $platLicht;
+              font-size: 18px;
+              opacity: 0.5;
+          }
+
+          button {
+              border-radius: 10px;
+              background-color: $ctaGroen;
+              color: $wit;
+              border: 1px solid $wit;
+              height: 50px;
+              width: 205px;
+              margin-top: 1em;
+          }
+      }
+  }
+
+  .kennis {
+      padding: 60px 20px 100px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .usp {
+          width: 100%;
+      }
+
+      h2 {
+          width: 80%;
+      }
+
+      p {
+          width: 90%;
+          margin: 30px 0px;
+          line-height: 24px;
+      }
+
+      .caroussel {
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          justify-content: flex-start;
+          width: 100%;
+
+          .fotos {
+              display: flex;
+              transition: transform 1s;
+
+              .fotoKaart {
+                  padding: 2em;
+                  padding-left: 0;
+                  min-width: 170px;
+
+                  img {
+                      max-height: 178px;
+                      width: auto;
+                      border-radius: 10px;
+                  }
+              }
+          }
+
+          .knoppenLijst {
+              display: flex;
+              justify-content: flex-end;
+              min-height: 1em;
+          }
+
+          .knop {
+              background-color: $platLicht;
+              height: 0.6em;
+              width: 3em;
+              border: none;
+              margin-left: 1em;
+              border-radius: 10px;
+          }
+
+          .active {
+              background: $oranje;
+          }
+      }
+  }
+
+  .overMetHand {
+      background: transparent linear-gradient(162deg, #ff8000 0%, #ffa200 100%) 0% 0% no-repeat padding-box;
+      color: $wit;
+      padding: 50px 20px 50px 20px;
+
+      h2 {
+          margin-bottom: 20px;
+          line-height: 1.4em;
+          color: $wit;
+      }
+
+      p {
+          margin-top: 1em;
+          padding-bottom: 1em;
+          line-height: 1.7em;
+          opacity: 0.8;
+      }
+
+      img {
+          display: none;
+      }
+  }
+
+  .kernwaarden {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+          margin-bottom: 20px;
+      }
+
+      p {
+          margin-top: 1em;
+          padding-bottom: 1em;
+          line-height: 1.7em;
+      }
+
+      .tekst {
+          padding: 60px 20px 0 20px;
+
+          button {
+              border-radius: 10px;
+              background-color: $ctaGroen;
+              color: $wit;
+              height: 50px;
+              border: 1px solid $wit;
+              width: 100%;
+              margin: 1em 0 0 0;
+              font-size: 16px;
+              font-weight: 600;
+              letter-spacing: 1px;
+          }
+      }
+
+      .gezicht {
+          padding-top: 80px;
+          min-width: 40%;
+          margin-right: 50px;
+
+          img {
+              max-width: 100%;
+              height: auto;
+              background-color: #0a1c2b;
+          }
+      }
+  }
+
+  footer {
+      background-color: #f5f5f5;
+      padding-top: 3em;
+      padding-bottom: 3em;
+      display: flex;
+      flex-direction: column;
+
+      .contactInfo {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          p {
+              font-size: 16px;
+              margin: 0;
+          }
+
+          .logo {
+              flex: 1;
+          }
+
+          .naw {
+              margin-top: 2em;
+              flex: 1;
+              text-align: center;
+          }
+
+          .tel {
+              margin-top: 2em;
+              flex: 1;
+              text-align: center;
+          }
+
+          .opening {
+              margin-top: 2em;
+              flex: 1;
+              text-align: center;
+          }
+      }
+
+      .copyright {
+          display: flex;
+          margin-top: 5em;
+          flex-direction: column;
+          align-items: center;
+
+          .payoff {
+              font-size: 14px;
+              flex: 2;
+              text-align: center;
+              max-width: 79%;
+          }
+
+          .klopper {
+              margin-top: 3em;
+              flex: 1;
+              display: flex;
+              align-content: center;
+              font-size: 14px;
+              justify-content: flex-end;
+          }
+      }
+  }
+
+  @media only screen and (min-width: 700px) {
+      .verborgen {
+          transform: translateX(-200vw);
+      }
+
+      h1 {
+          font-size: 40px;
+      }
+
+      h2 {
+          font-size: 30px;
+      }
+
+      h3 {
+          font-size: 20px;
+      }
+
+      main {
+          .partner {
+              text-align: left;
+              align-items: center;
+              padding: 20px;
+
+              h1 {
+                  max-width: 60%;
+              }
+
+              button {
+                  margin: 3em auto 3em auto;
+                  width: 40%;
+              }
+
+              :after {
+                  right: -20vw;
+                  top: -25vh;
+              }
+          }
+      }
+
+      .opsomming {
+          flex-direction: row;
+          flex-wrap: wrap;
+          padding-left: 60px;
+
+          .card {
+              min-width: 50%;
+          }
+
+          .flex2 {
+              min-width: 100%;
+          }
+      }
+
+      .nieuwsVoordelen {
+          flex-direction: row;
+          flex-wrap: nowrap;
+          margin-top: 50px;
+          width: 100%;
+
+          .nieuwsveld {
+              min-width: 50%;
+              margin: 0;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              border-radius: 20px;
+              border: 8px solid $wit;
+              padding: 1em 0 1em 50px;
+
+              h5 {
+                  width: 90%;
+              }
+          }
+
+          .voordelen {
+              min-width: 50%;
+              min-height: 55%;
+              margin: 0;
+              padding: 1em 2em 2em 20px;
+          }
+
+          .gradientTerugbellen {
+              border-radius: 20px;
+              padding: 1em;
+              margin: 1em;
+              max-width: 80%;
+
+              h2 {
+                  font-size: 24px;
+              }
+
+              button {
+                  position: absolute;
+                  top: -1em;
+                  right: 0;
+                  width: 35%;
+              }
+          }
+      }
+
+      .kennis {
+          .usp {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              min-height: 400px;
+              padding-left: 50px;
+          }
+      }
+
+      .overMetHand {
+          padding-left: 50px;
+          background: transparent linear-gradient(126deg, #ff8000 0%, #ffa200 100%) 0% 0% no-repeat padding-box;
+          position: relative;
+          margin: 0 auto;
+          color: $wit;
+
+          h2 {
+              width: 60%;
+              margin-bottom: 20px;
+              line-height: 1.2em;
+          }
+
+          p {
+              width: 75%;
+              margin-top: 10px;
+              padding-bottom: 20px;
+          }
+
+          img {
+              display: block;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              opacity: 0.8;
+          }
+      }
+
+      .kernwaarden {
+          .gezicht {
+              display: flex;
+              padding-top: 80px;
+              padding-right: 100px;
+
+              img {
+                  width: 100%;
+                  height: auto;
+                  background-color: #0a1c2b;
+              }
+          }
+      }
+  }
+
+  @media only screen and (min-width: 1000px) {
+      h3 {
+          font-size: 18px;
+      }
+
+      h2 {
+          font-size: 38px;
+      }
+
+      nav {
+          .small {
+              display: none;
+          }
+
+          .wide {
+              display: flex;
+              width: 100%;
+              margin-top: 30px;
+              display: flex;
+              color: $wit;
+              align-items: center;
+
+              ul {
+                  flex: 10;
+                  display: flex;
+                  justify-content: space-around;
+                  margin-left: 14%;
+                  margin-right: 17%;
+
+                  a {
+                      font-size: 16px;
+                      color: $wit;
+                      text-decoration: none;
+                  }
+              }
+          }
+      }
+
+      main {
+          .partner {
+              flex-direction: row;
+              padding-bottom: 40px;
+              padding-top: 40px;
+
+              .container {
+                  flex: 1;
+                  flex-direction: column;
+                  text-align: left;
+              }
+
+              h1 {
+                  min-width: 100%;
+                  margin: 0;
+              }
+
+              h3 {
+                  max-width: 100%;
+                  margin: 0;
+              }
+
+              .h3 {
+                  font-size: 18px;
+              }
+
+              .foto {
+                  flex: 1;
+                  width: 100%;
+                  height: auto;
+
+                  .lee {
+                      width: 100%;
+                      height: auto;
+                      box-shadow: 0px 0px 40px #0000001a;
+                      transform: translateX(140px) scale(1.4, 1.4);
+                      border: 4px solid $wit;
+                  }
+              }
+
+              :after {
+                  right: 20%;
+                  top: -25vh;
+              }
+          }
+      }
+
+      .opsomming {
+          .card {
+              min-width: 25%;
+          }
+
+          .flex2 {
+              min-width: 50%;
+              margin: 10em auto 2em auto;
+          }
+      }
+
+      .nieuwsVoordelen {
+          flex-direction: row;
+
+          .nieuwsveld {
+              max-width: 50%;
+              padding-top: 40px;
+              padding-bottom: 40px;
+          }
+
+          .voordelen {
+              max-width: 100%;
+              padding: 0 0 0 40px;
+          }
+
+          .gradientTerugbellen {
+              max-width: 100%;
+              height: aut0;
+              margin-right: 50px;
+              border-radius: 10px;
+              padding-top: 30px;
+          }
+      }
+
+      .kennis {
+          flex-direction: row;
+          flex-wrap: nowrap;
+
+          .usp {
+              width: 50%;
+              padding: 40px;
+          }
+
+          .caroussel {
+              .fotos {
+                  .fotoKaart {
+                      min-width: 205px;
+
+                      img {
+                          min-height: 233px;
+                      }
+                  }
+              }
+
+              width: 50%;
+          }
+      }
+
+      .overMetHand {
+          border-radius: 41px;
+          padding-left: 70px;
+          margin-left: 50px;
+          margin-right: 50px;
+
+          p {
+              width: 60%;
+          }
+      }
+
+      .kernwaarden {
+          flex-direction: row;
+          overflow: hidden;
+          margin-top: 50px;
+
+          .tekst {
+              min-width: 50%;
+              padding: 60px;
+
+              h2 {
+                  font-size: 24px;
+              }
+
+              button {
+                  width: 70%;
+                  margin-top: 2em;
+              }
+          }
+
+          .gezicht {
+              display: flex;
+              padding: 0;
+              align-items: center;
+              width: 50%;
+
+              img {
+                  background-color: transparent;
+                  width: auto;
+                  height: 60%;
+              }
+          }
+      }
+
+      .footer {
+          padding: 0 60px 0 60px;
+
+          .contactInfo {
+              flex-direction: row;
+
+              p {
+                  font-size: 16px;
+                  margin: 0;
+              }
+
+              .logo {
+                  flex: 1;
+              }
+
+              .naw {
+                  flex: 1;
+                  text-align: left;
+              }
+
+              .tel {
+                  flex: 1;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  text-align: left;
+              }
+
+              .opening {
+                  flex: 1;
+                  text-align: left;
+              }
+          }
+
+          .copyright {
+              display: flex;
+              flex-direction: row;
+              margin-top: 3em;
+              margin-bottom: 3em;
+
+              .payoff {
+                  font-size: 14px;
+                  flex: 2;
+              }
+
+              .klopper {
+                  flex: 1;
+                  display: flex;
+                  justify-content: center;
+                  font-size: 14px;
+                  margin-top: 0;
+              }
+          }
+      }
+  }
+
+  @media only screen and (min-width: 1241px) {
+      body {
+          font-size: 16px;
+      }
+
+      h1 {
+          font-size: 54px;
+      }
+
+      h3 {
+          font-size: 24px;
+      }
+
+      h4 {
+          font-size: 18px; // ja! bij de rondjes
+      }
+
+      .pagina {
+          width: 1241px;
+          margin: 0 auto;
+      }
+
+      main {
+          overflow: visible;
+
+          .partner {
+              padding-top: 100px;
+
+              :after {
+                  right: 13vw;
+                  top: -15vh;
+              }
+          }
+      }
+
+      .nieuwsVoordelen {
+          position: relative;
+          padding-top: 100px;
+      }
+
+      .nieuwsVoordelen:after {
+          content: " ";
+          background-image: url(images/BackgroundElement.svg);
+          position: absolute;
+          width: 1369px;
+          top: -360px;
+          right: 87%;
+          height: 1369px;
+          z-index: -10;
+          background-position: right center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          visibility: visible;
+      }
+
+      .kernwaarden {
+          .tekst {
+              min-width: 45%;
+          }
+
+          .gezicht {
+              min-width: 55%;
+          }
+
+          img {
+              height: 100%;
+              width: auto;
+              transform: scale(1.2) translateX(50px);
+          }
+      }
+
+      .footer {
+          min-width: 100vw;
+          margin: 0;
+
+          .copyright {
+              .payoff {
+                  font-size: 14px;
+                  flex: 1;
+              }
+
+              .klopper {
+                  flex: 1;
+                  display: flex;
+                  justify-content: flex-end;
+                  font-size: 14px;
+                  margin-top: 0;
+              }
+          }
+      }
+  }
