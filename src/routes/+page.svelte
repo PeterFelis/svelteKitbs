@@ -197,13 +197,11 @@
         <ul>
             {#await data then data}
                 <li>
-                    {#each data.info as item, i}
-                        {#if i < 5}
-                            <h5 class="bold">{item.title}</h5>
-                            <p class="datum regular">
-                                {item.publishedAt.substr(0, 10)}
-                            </p>
-                        {/if}
+                    {#each data.info as item}
+                        <h5 class="bold">{item.title}</h5>
+                        <p class="datum regular">
+                            {item.publishedAt.substr(0, 10)}
+                        </p>
                     {/each}
                 </li>
             {/await}
