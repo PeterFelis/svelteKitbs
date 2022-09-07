@@ -5,6 +5,8 @@
     onMount(async () => {
         new scriptJS();
     });
+
+    export let data;
 </script>
 
 <svelte:head>
@@ -17,7 +19,11 @@
     <nav>
         <div class="small">
             <a href="#home"
-                ><img class="logo" src="images/outhands-logo-zwart.svg" /></a
+                ><img
+                    class="logo"
+                    src="images/outhands-logo-zwart.svg"
+                    alt=""
+                /></a
             >
             <div class="hamburger" id="hamburger">
                 <div id="lijnT" class="lijn" />
@@ -31,6 +37,7 @@
                 ><img
                     class="logo"
                     src="images/outhands-logo-zwart (12)-1.svg"
+                    alt=""
                 /></a
             >
             <ul>
@@ -58,7 +65,7 @@
             <button class="knopOverons">over ons</button>
         </div>
         <div class="foto">
-            <img class="lee" src="images/lee.png" />
+            <img class="lee" src="images/lee.png" alt="" />
         </div>
     </div>
 </main>
@@ -87,13 +94,13 @@
         </p>
         <h5 class="ctatext">
             Bekijk al onze diensten
-            <img src="images/Icon awesome-long-arrow-alt-right-1.svg" />
+            <img src="images/Icon awesome-long-arrow-alt-right-1.svg" alt="" />
         </h5>
     </div>
 
     <div class="card">
         <div class="iconGradient">
-            <img src="images/001-piggy-bank.svg" />
+            <img src="images/001-piggy-bank.svg" alt="" />
         </div>
         <div>
             <h4>Concept & Strategie</h4>
@@ -108,7 +115,7 @@
 
     <div class="card">
         <div class="iconGradient">
-            <img src="images/002-check.svg" />
+            <img src="images/002-check.svg" alt="" />
         </div>
         <div>
             <h4>Ontwerp & Vormgeving</h4>
@@ -125,7 +132,7 @@
 <article class="pagina opsomming">
     <div class="card">
         <div class="iconGradient">
-            <img src="images/scale.svg" />
+            <img src="images/scale.svg" alt="" />
         </div>
         <div>
             <h4 class="card-title">Website ontwikkeling</h4>
@@ -140,7 +147,7 @@
 
     <div class="card">
         <div class="iconGradient">
-            <img src="images/search.svg" />
+            <img src="images/search.svg" alt="" />
         </div>
         <div>
             <h4 class="card-title">E-commerce</h4>
@@ -155,7 +162,7 @@
 
     <div class="card">
         <div class="iconGradient">
-            <img src="images/004-check-1.svg" />
+            <img src="images/004-check-1.svg" alt="" />
         </div>
         <div>
             <h4 class="card-title">Web applicaties</h4>
@@ -170,7 +177,7 @@
 
     <div class="card">
         <div class="iconGradient">
-            <img src="images/003-presentation.svg" />
+            <img src="images/003-presentation.svg" alt="" />
         </div>
         <div class="card-body">
             <h4 class="card-title">Internet Marketing</h4>
@@ -188,40 +195,20 @@
     <div class="nieuwsveld">
         <h2 class="bold">Het laatste nieuws</h2>
         <ul>
-            <li>
-                <h5 class="bold">
-                    Klanten van ABN AMRO kunnen niet internetbankieren...
-                </h5>
-                <p class="datum regular">oktober 28, 2021</p>
-            </li>
-            <li>
-                <h5 class="bold">
-                    Britse waakhond geeft gezichtsscanbedrijf Clearview AI...
-                </h5>
-                <p class="datum regular">oktober 28, 2021</p>
-            </li>
-            <li>
-                <h5 class="bold">
-                    WhatsApp werkt na 24 oktober niet meer op iPhone 5 en....
-                </h5>
-                <p class="datum regular">oktober 28, 2021</p>
-            </li>
-            <li>
-                <h5 class="bold">
-                    Tinder-eigenaar mag eigen betaalmethode blijven..
-                </h5>
-                <p class="datum regular">oktober 28, 2021</p>
-            </li>
-            <li>
-                <h5 class="bold">
-                    Experts: breng toezicht op algoritmes onder bij...
-                </h5>
-                <p class="datum regular">oktober 28, 2021</p>
-            </li>
+            {#await data then data}
+                <li>
+                    {#each data.info as item}
+                        <h5 class="bold">{item.title}</h5>
+                        <p class="datum regular">
+                            {item.publishedAt.substr(0, 10)}
+                        </p>
+                    {/each}
+                </li>
+            {/await}
         </ul>
         <h5 class="ctatext">
             Bekijk al onze nieuwsberichten
-            <img src="images/Icon awesome-long-arrow-alt-right-1.svg" />
+            <img src="images/Icon awesome-long-arrow-alt-right-1.svg" alt="" />
         </h5>
     </div>
 
@@ -277,7 +264,7 @@
         </p>
         <h5 class="ctatext">
             Meer over ons
-            <img src="images/Icon awesome-long-arrow-alt-right-1.svg" />
+            <img src="images/Icon awesome-long-arrow-alt-right-1.svg" alt="" />
         </h5>
     </div>
 
@@ -285,48 +272,48 @@
         <div class="fotos">
             <div class="fotoKaart">
                 <picture>
-                    <img src="images/caroussel/megan.png" />
+                    <img src="images/caroussel/megan.png" alt="" />
                 </picture>
                 <div class="fotoText">Megan met hoed</div>
             </div>
 
             <div class="fotoKaart">
                 <picture>
-                    <img src="images/caroussel/rafaella.png" />
+                    <img src="images/caroussel/rafaella.png" alt="" />
                 </picture>
                 <div class="fotoText">Zwoel kijkende rafaella</div>
             </div>
 
             <div class="fotoKaart">
                 <picture>
-                    <img src="images/caroussel/ibrahima.png" />
+                    <img src="images/caroussel/ibrahima.png" alt="" />
                 </picture>
                 <div class="fotoText">Ibrihama met rode bril</div>
             </div>
             <div class="fotoKaart">
                 <picture>
-                    <img src="images/caroussel/priscilia.jpg" />
+                    <img src="images/caroussel/priscilia.jpg" alt="" />
                 </picture>
                 <div class="fotoText">Priscilia eet ijs.</div>
             </div>
 
             <div class="fotoKaart">
                 <picture>
-                    <img src="images/caroussel/stefan.png" />
+                    <img src="images/caroussel/stefan.png" alt="" />
                 </picture>
                 <div class="fotoText">Stefan die eigenlijk Stefanie heet</div>
             </div>
 
             <div class="fotoKaart">
                 <picture>
-                    <img src="images/caroussel/megan.png" />
+                    <img src="images/caroussel/megan.png" alt="" />
                 </picture>
                 <div class="fotoText">Megan met hoed</div>
             </div>
 
             <div class="fotoKaart">
                 <picture>
-                    <img src="images/caroussel/rafaella.png" />
+                    <img src="images/caroussel/rafaella.png" alt="" />
                 </picture>
                 <div class="fotoText">Zwoel kijkende rafaella</div>
             </div>
@@ -336,7 +323,7 @@
 </section>
 
 <article id="overons" class="pagina overMetHand">
-    <img src="images/Hand.svg" />
+    <img src="images/Hand.svg" alt="" />
     <div>
         <h2 class="bold">
             Dit is Outhands Internet & Media Full Service Digital Agency
@@ -381,7 +368,7 @@
         <button>Kom werken bij Outhands</button>
     </div>
     <div class="gezicht">
-        <img src="images/Background.png" />
+        <img src="images/Background.png" alt="" />
     </div>
 </section>
 
@@ -390,7 +377,7 @@
         <div class="pagina contactInfo">
             <div class="logo">
                 <a href="#home">
-                    <img src="images/outhands-logo-zwart (12)-1.svg" />
+                    <img src="images/outhands-logo-zwart (12)-1.svg" alt="" />
                 </a>
             </div>
             <div class="naw">

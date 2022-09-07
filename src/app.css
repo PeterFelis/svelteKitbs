@@ -448,7 +448,6 @@ main .knopOverons {
 .kernwaarden .gezicht {
   padding-top: 80px;
   min-width: 40%;
-  margin-right: 50px;
 }
 .kernwaarden .gezicht img {
   max-width: 100%;
@@ -625,7 +624,6 @@ footer .copyright .klopper {
   .kernwaarden .gezicht {
     display: flex;
     padding-top: 80px;
-    padding-right: 100px;
   }
   .kernwaarden .gezicht img {
     width: 100%;
