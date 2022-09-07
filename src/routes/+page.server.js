@@ -6,6 +6,13 @@ export async function load({ }) {
         method: 'get',
     })
     let info = await response.json();
-    info = info.articles;
+    
+    if (info.status =='error')
+    return {info}
+    
+    info=info.articles
+    info = info.slice(0,5);
     return { info }
-}
+    }
+
+//}

@@ -7,7 +7,7 @@
     });
 
     export let data;
-    console.log(data);
+    if (data.info.status=='error') console.log('error bij fetchen:' ,data);
 </script>
 
 <svelte:head>
@@ -197,6 +197,7 @@
         <h2 class="bold">Het laatste nieuws</h2>
         <ul>
             {#await data then data}
+            {#if data.info.status!='error'}
                 <li>
                     {#each data.info as item}
                         <h5 class="bold">{item.title}</h5>
@@ -205,6 +206,7 @@
                         </p>
                     {/each}
                 </li>
+            {/if}
             {/await}
         </ul>
         <h5 class="ctatext">
