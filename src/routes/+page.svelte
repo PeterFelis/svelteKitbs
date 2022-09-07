@@ -209,10 +209,11 @@
             {/if}
             {/await}
         </ul>
-        <h5 class="ctatext">
+        <a class="nieuwslink" href='/nieuws'><h5 class="ctatext">
             Bekijk al onze nieuwsberichten
-            <img src="images/Icon awesome-long-arrow-alt-right-1.svg" alt="" />
+            <img src="images/Icon awesome-long-arrow-alt-right-1.svg" alt="" />    
         </h5>
+    </a>
     </div>
 
     <div class="voordelenTB">

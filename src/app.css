@@ -44,6 +44,10 @@ h5 {
   font-size: 15px;
 }
 
+.nieuwslink {
+  cursor: pointer;
+}
+
 .ctatext {
   color: #ff8000;
   font-weight: 600;
@@ -326,6 +330,16 @@ main .knopOverons {
   border: none;
   border-radius: 10px;
   padding: 25px;
+}
+.nieuwsVoordelen .gradientTerugbellen .telNummerKnop::-moz-placeholder {
+  color: #8f8f8f;
+  font-size: 18px;
+  opacity: 0.5;
+}
+.nieuwsVoordelen .gradientTerugbellen .telNummerKnop:-ms-input-placeholder {
+  color: #8f8f8f;
+  font-size: 18px;
+  opacity: 0.5;
 }
 .nieuwsVoordelen .gradientTerugbellen .telNummerKnop::placeholder {
   color: #8f8f8f;
@@ -894,4 +908,4 @@ footer .copyright .klopper {
     font-size: 14px;
     margin-top: 0;
   }
-}
+}/*# sourceMappingURL=app.css.map */
