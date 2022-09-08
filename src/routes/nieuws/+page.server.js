@@ -6,12 +6,10 @@ export async function load({ }) {
         method: 'get',
     })
     let info = await response.json();
-    
-    if (info.status =='error')
-    return {info}
-    
-    info=info.articles
-    return { info }
-    }
 
-//}
+    if (info.status == 'error')
+        return { info }
+
+    info = info.articles
+    return { info }
+}

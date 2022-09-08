@@ -7,7 +7,7 @@
     });
 
     export let data;
-    if (data.info.status=='error') console.log('error bij fetchen:' ,data);
+    if (data.info.status == "error") console.log("error bij fetchen:", data);
 </script>
 
 <svelte:head>
@@ -37,7 +37,7 @@
             <a href="#home"
                 ><img
                     class="logo"
-                    src="images/outhands-logo-zwart (12)-1.svg"
+                    src="images/outhands-logo-zwart.svg"
                     alt=""
                 /></a
             >
@@ -197,23 +197,27 @@
         <h2 class="bold">Het laatste nieuws</h2>
         <ul>
             {#await data then data}
-            {#if data.info.status!='error'}
-                <li>
-                    {#each data.info as item}
-                        <h5 class="bold">{item.title}</h5>
-                        <p class="datum regular">
-                            {item.publishedAt.substr(0, 10)}
-                        </p>
-                    {/each}
-                </li>
-            {/if}
+                {#if data.info.status != "error"}
+                    <li>
+                        {#each data.info as item}
+                            <h5 class="bold">{item.title}</h5>
+                            <p class="datum regular">
+                                {item.publishedAt.substr(0, 10)}
+                            </p>
+                        {/each}
+                    </li>
+                {/if}
             {/await}
         </ul>
-        <a class="nieuwslink" href='/nieuws'><h5 class="ctatext">
-            Bekijk al onze nieuwsberichten
-            <img src="images/Icon awesome-long-arrow-alt-right-1.svg" alt="" />    
-        </h5>
-    </a>
+        <a class="nieuwslink" href="/nieuws"
+            ><h5 class="ctatext">
+                Bekijk al onze nieuwsberichten
+                <img
+                    src="images/Icon awesome-long-arrow-alt-right-1.svg"
+                    alt=""
+                />
+            </h5>
+        </a>
     </div>
 
     <div class="voordelenTB">

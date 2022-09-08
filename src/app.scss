@@ -56,8 +56,8 @@
       font-size: 15px; // was 16 voor bekijk al onze diensten naar 16
   }
 
-  .nieuwslink{
-    cursor:pointer;
+  .nieuwslink {
+      cursor: pointer;
   }
 
   .ctatext {
@@ -93,7 +93,7 @@
       bottom: 0;
       height: 100vh;
       width: 100%;
-      background: rgb(255, 154, 1);
+      background: rgba(255, 154, 1, 0.9);
       z-index: 5;
 
       ul {
@@ -142,7 +142,7 @@
           left: 0;
           height: 8vh;
           padding: 0 20px 0 20px;
-          background: rgb(255, 154, 1);
+          background: rgba(255, 154, 1, 0.5);
       }
 
       .hamburger {
