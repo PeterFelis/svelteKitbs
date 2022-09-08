@@ -18,7 +18,7 @@
                 {/if}
             {/await}
         </div>
-        <div on:click={() => goto("/#nieuws")}>
+        <div class="link" on:click={() => goto("/#nieuws")}>
             <h5 class="ctatext">
                 <img
                     class="omdraaien"
@@ -43,5 +43,9 @@
 
     .omdraaien {
         transform: scale(-1, 1);
+    }
+
+    .link:hover {
+        cursor: pointer;
     }
 </style>
